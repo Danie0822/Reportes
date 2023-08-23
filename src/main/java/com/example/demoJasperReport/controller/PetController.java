@@ -45,16 +45,6 @@ public class PetController {
         return ResponseEntity.ok().headers(headers).body(petService.exportPdf());
     }
 
-    @GetMapping("/export-xls")
-    public ResponseEntity<byte[]> exportXls() throws JRException, FileNotFoundException {
-        HttpHeaders headers = new HttpHeaders();
-        headers.set("Content-Type", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; charset=UTF-8");
-        var contentDisposition = ContentDisposition.builder("attachment")
-                .filename("petsReport" + ".xls").build();
-        headers.setContentDisposition(contentDisposition);
-        return ResponseEntity.ok()
-                .headers(headers)
-                .body(petService.exportXls());
-    }
+
 
 }
