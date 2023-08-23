@@ -2,7 +2,6 @@ package com.example.demoJasperReport.controller;
 
 import com.example.demoJasperReport.model.Pet;
 import com.example.demoJasperReport.service.PetService;
-import lombok.var;
 import net.sf.jasperreports.engine.JRException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
